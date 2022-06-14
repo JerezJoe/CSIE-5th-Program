@@ -9,7 +9,7 @@ import time
 x_value, humidity, temperature, moisture, light = [], [], [], [], []
 index = count()
 
-ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
+ser = serial.Serial('/dev/ttyS0', 9600, timeout=1)
 
 
 def data_points():
