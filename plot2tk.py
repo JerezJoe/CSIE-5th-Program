@@ -24,7 +24,6 @@ def data_points():
             tem = response[15:19]
             moi = response[-15:-11]
             lig = response[-5:-2].strip("/n")
-            # 這邊沒看到需要移除字符是甚麼 需要自行補上
 
             templateData = {"tem": tem, "hum": hum, "moi": moi, "lig": lig}
             print(f"Humidity:{hum}% Temperature:{tem} Moisture:{moi} Light:{lig}")
@@ -80,7 +79,7 @@ def app():
             ax4.plot(x_value, light, marker='o', color='orange')
 
             graph.draw()
-            # 更新畫面時間間隔 有需要可以改成隨data_points更新
+            # 更新畫面時間間隔 
             time.sleep(0.5)
 
     threading.Thread(target=plotter).start()
